@@ -1,0 +1,12 @@
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+venv/
+
+# Descargas hechas por los notebooks (los datos del taller viven en 06-fuentes-auditables/datos/)
+*/ejemplo-final/datos/
+*/mi-trabajo/datos/
+
+# Configuración local de Claude Code
+.claude/settings.local.json
