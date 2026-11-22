@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Primeros pasos · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html">Antes del taller</a><a href="primeros-pasos.html" aria-current=page>Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" class=sub>03 · Datos</a><a href="ruta-04.html" class=sub>04 · Literatura</a><a href="ruta-05.html" class=sub>05 · Cualitativo</a><a href="ruta-06.html" class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html">⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Primeros pasos</h1><p class="subtitulo">Minutos 5–15 · todos juntos</p>
+
+<p class="lead">Minutos 5 a 15. Todos juntos: lo mínimo para trabajar con seguridad y elegir ruta.</p>
+<h2>1. La pantalla de Claude Code (app de escritorio)</h2>
+<ul><li>Pestaña <span class="ui">Code</span>: ahí trabajamos.</li>
+<li><b>Cuadro de texto</b>: donde escribes o pegas los prompts.</li>
+<li>Debajo del cuadro: el <b>selector de carpeta</b> (debe decir <code>taller-claude-code-cide</code>) y el <b>selector de modo de permisos</b>.</li>
+<li>Paneles útiles: <span class="ui">Browser</span> (vista previa de páginas web), <span class="ui">Changes</span> (qué archivos cambió Claude) y <span class="ui">Terminal</span>.</li></ul>
+<h2>2. Los modos de permisos: quién decide qué</h2>
+<table><thead><tr><th>Modo</th><th>Qué hace</th><th>¿Cuándo usarlo hoy?</th></tr></thead><tbody>
+<tr><td><span class="ui">Manual</span></td><td>Pide tu permiso antes de editar archivos o ejecutar comandos.</td><td>✅ <b>Recomendado para empezar.</b> Lees y apruebas cada paso.</td></tr>
+<tr><td><span class="ui">Accept edits</span></td><td>Edita archivos sin preguntar; sigue pidiendo permiso para ejecutar comandos.</td><td>Cuando ya tengas confianza (por ejemplo, en el nivel 3 de tu ruta).</td></tr>
+<tr><td><span class="ui">Plan</span></td><td>Explora y propone un plan sin modificar nada.</td><td>Para pensar antes de actuar.</td></tr>
+<tr><td><span class="ui">Auto</span></td><td>Un clasificador revisa las acciones y decide cuáles requieren confirmación.</td><td>No es necesario hoy.</td></tr>
+<tr><td><span class="ui">Bypass permissions</span></td><td>No pide permiso para nada.</td><td>❌ <b>No lo uses</b> en el taller.</td></tr></tbody></table>
+<div class="caja aviso"><p class="caja-t">Regla de oro número 1</p><p><b>Lee antes de aprobar.</b> Cuando Claude pida permiso para ejecutar algo, revisa qué va a hacer. Si no lo entiendes, pregúntale: <i>“¿Qué hace este comando?”</i></p></div>
+<h2>3. Anatomía de un buen prompt</h2>
+<p>Todos los prompts del taller siguen esta estructura. Úsala también en tu trabajo:</p>
+<div class="anatomia">
+<div><b>Contexto</b><span>Qué quiero lograr y para qué.</span></div>
+<div><b>Insumos</b><span>Qué archivos leer (con su ruta).</span></div>
+<div><b>Tarea</b><span>Qué producir, en qué formato y dónde guardarlo.</span></div>
+<div><b>Reglas</b><span>Qué no hacer (“no inventes”, “cita literal”, “espera mi visto bueno”).</span></div>
+<div><b>Verificación</b><span>Cómo comprobar que quedó bien.</span></div></div>
+<h2>4. Ejercicio común: que Claude te recomiende una ruta (3 min)</h2>
+<p>Pega esto en Claude Code:</p>
+<pre><code>Lee el README.md de esta carpeta. Hazme 3 preguntas breves sobre mi trabajo académico
+(qué investigo, con qué tipo de datos o textos trabajo, qué me quita más tiempo) y,
+con mis respuestas, recomiéndame una de las 6 rutas del taller explicándome por qué.</code></pre>
+<p>✅ <b>Deberías ver:</b> tres preguntas. Respóndelas en lenguaje natural y Claude te recomendará una ruta.</p>
+<div class="caja info"><p class="caja-t">¿Por qué empezamos así?</p><p>Porque muestra lo esencial: Claude Code <b>lee archivos de tu carpeta</b>, <b>usa ese contexto</b> y <b>conversa contigo</b> antes de actuar.</p></div>
+<h2>5. ¿Tus datos o los del kit?</h2>
+<p>En todas las rutas puedes usar tus materiales o los del kit. <b>Para hoy recomendamos los del kit</b>: así no te preocupas por datos sensibles y puedes comparar con el ejemplo terminado. Repite en casa con tus materiales.</p>
+<p class="siguiente"><a class="boton" href="rutas.html">Siguiente: elige tu ruta →</a></p>
+
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>

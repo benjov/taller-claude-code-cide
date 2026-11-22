@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruta 03 · Datos · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html">Antes del taller</a><a href="primeros-pasos.html">Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" aria-current=page class=sub>03 · Datos</a><a href="ruta-04.html" class=sub>04 · Literatura</a><a href="ruta-05.html" class=sub>05 · Cualitativo</a><a href="ruta-06.html" class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html">⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Ruta 03 · Datos</h1><p class="subtitulo">📊 Notebook reproducible con datos del Banco Mundial, 3 gráficas, un modelo simple y un reporte HTML.</p>
+<div class="resumen">
+<div><p class="et">Te llevas</p><p>Notebook reproducible con datos del Banco Mundial, 3 gráficas, un modelo simple y un reporte HTML.</p></div>
+<div><p class="et">Ideal para</p><p>Quien trabaja con datos cuantitativos (Python, R o Stata).</p></div>
+<div><p class="et">Tiempo</p><p>≈35 min en 6 niveles</p></div>
+<div><p class="et">Programación</p><p>Python (o R / Stata)</p></div>
+</div>
+<div class="dos-col">
+<div class="tarjeta"><p class="et">📥 Insumos</p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/03-datos/datos/wdi_latam.csv">Datos del Banco Mundial (CSV)</a></li><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/03-datos/datos/FUENTES.md">Fuentes y huella del archivo</a></li></ul></div>
+<div class="tarjeta"><p class="et">🏁 Ejemplo terminado <small>(míralo después de intentarlo)</small></p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/03-datos/ejemplo-final/mexico_en_america_latina.ipynb">Notebook de ejemplo</a></li><li><a href="https://colab.research.google.com/github/benjov/taller-claude-code-cide/blob/main/03-datos/ejemplo-final/mexico_en_america_latina.ipynb">Abrir el ejemplo en Colab</a></li></ul></div>
+</div>
+<div class="progreso" data-ruta="03-datos"><div class="barra-p"><span></span></div><p></p></div>
+<div class="caja info"><p class="caja-t">Antes de empezar</p><p>En Claude Code, con la carpeta del repositorio abierta, trabajarás en <code>03-datos/mi-trabajo/</code>. Copia cada prompt con el botón <b>Copiar</b>, pégalo, <b>lee lo que Claude propone</b> y aprueba. Marca cada nivel al terminarlo.</p></div>
+<details class="detalles"><summary>📖 Detalles de la ruta: opciones de insumos, ética y la lección principal</summary><h2>¿Para quién es esta ruta?</h2>
+<p>Para quien trabaja (o quiere trabajar) con datos cuantitativos y quiere pasar de una pregunta a <strong>gráficas y un reporte que se puedan compartir y replicar</strong>, en Python, R o Stata.</p>
+<h2>Qué te llevas al final (≈35 min)</h2>
+<ul>
+<li>Un <strong>notebook</strong> (o script de R / do-file de Stata) que obtiene los datos, revisa qué falta, grafica y estima un modelo simple.</li>
+<li><strong>3 gráficas</strong> listas para presentación, con fuente al pie.</li>
+<li>Un <strong>reporte HTML sin código</strong> para mandar a colegas, y un Excel con los datos y las tablas usadas.</li>
+</ul>
+<p>👉 Mira <code>ejemplo-final/reporte_mexico_al.html</code> para ver la meta.</p>
+<h2>El caso del kit: México en América Latina</h2>
+<p><strong>¿Cómo ha evolucionado la violencia en México frente a la región, y se relaciona con la desigualdad o el ingreso?</strong>
+Usa datos <strong>reales</strong> del Banco Mundial (17 países, 2000–2023): homicidios, PIB per cápita, Gini y desempleo.</p>
+<h3>Dos caminos para los datos</h3>
+<table>
+<thead>
+<tr>
+<th>Camino</th>
+<th>Qué haces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A · Descargar de la API</strong></td>
+<td>Le pides a Claude Code que consulte la API pública del Banco Mundial (sin registro)</td>
+</tr>
+<tr>
+<td><strong>B · Copia del repositorio</strong></td>
+<td>Usas <code>datos/wdi_latam.csv</code> (ver <code>datos/FUENTES.md</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3>¿Tus propios datos?</h3>
+<p>Puedes traer un CSV o Excel de tu investigación (público o anonimizado) a <code>03-datos/mi-trabajo/</code> y usar los mismos prompts con tu pregunta. <strong>No uses datos confidenciales.</strong></p>
+<h2>Python, R o Stata</h2>
+<table>
+<thead>
+<tr>
+<th>Lenguaje</th>
+<th>Cómo funciona</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Python</strong></td>
+<td>Claude Code escribe y <strong>ejecuta</strong> el notebook; también puedes abrirlo en Colab</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>Claude Code escribe y ejecuta un script <code>.R</code> o un documento Quarto, si tienes R instalado</td>
+</tr>
+<tr>
+<td><strong>Stata</strong></td>
+<td>Claude Code escribe el <code>.do</code>; lo ejecuta si Stata está instalado y accesible desde la terminal. Si no, lo corres tú</td>
+</tr>
+</tbody>
+</table>
+<h2>Dónde trabajar</h2>
+<p>Abre en Claude Code la carpeta del repositorio y trabaja en <code>03-datos/mi-trabajo/</code>.</p>
+<h2>Pasos</h2>
+<p>Abre <code>prompts.md</code> y sigue los niveles en orden.</p>
+<h2>La lección de esta ruta</h2>
+<p>Claude Code programa rápido, pero <strong>la interpretación es tuya</strong>. Al construir el ejemplo, la primera versión del texto final afirmaba algo que las gráficas contradecían. Revisar que cada frase del reporte coincida con los números es parte del método.</p></details>
+<p>Copia y pega cada prompt en Claude Code (pestaña <strong>Code</strong>, con la carpeta del repositorio abierta).
+Si prefieres <strong>R</strong> o <strong>Stata</strong>, cambia "notebook de Python" por "script de R" o "do-file de Stata".</p><section class="nivel" id="nivel-0">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="03-datos-n0"> <span>Nivel 0</span></label>
+<h2>Preparar el terreno</h2><span class="min">2 min</span></div>
+<pre><code>Crea la carpeta 03-datos/mi-trabajo/ y trabaja ahí.
+Revisa si tengo Python con pandas, matplotlib, statsmodels y jupyter
+(o R, o Stata, según el lenguaje que elija). Dime qué falta; no instales nada todavía.
+</code></pre><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Claude te dice qué tienes instalado y qué falta, sin instalar nada.</p></div></section><section class="nivel" id="nivel-1">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="03-datos-n1"> <span>Nivel 1</span></label>
+<h2>Conseguir los datos <small>Elige A o B</small></h2><span class="min">6 min</span></div>
+<h3>Opción A · API del Banco Mundial</h3>
+<pre><code>Quiero comparar a México con América Latina en violencia, desigualdad e ingreso.
+Usa la API pública del Banco Mundial (WDI) para descargar, de 2000 a 2023 y para
+los 17 países latinoamericanos principales, estos indicadores:
+homicidios por 100,000 habitantes, PIB per cápita PPA, índice de Gini y desempleo.
+Si la API falla, reintenta. Guarda los datos en mi-trabajo/datos/ y anota en un
+archivo FUENTES.md las URLs consultadas y la fecha.
+</code></pre>
+<h3>Opción B · Copia del repositorio</h3>
+<pre><code>Quiero comparar a México con América Latina en violencia, desigualdad e ingreso.
+Usa los datos de 03-datos/datos/wdi_latam.csv. Lee primero 03-datos/datos/FUENTES.md
+y verifica la huella SHA-256 del archivo. Explícame su estructura.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code sabe usar <strong>APIs públicas</strong> (Banco Mundial, INEGI, OCDE) y documentar de dónde salió cada dato.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Los datos en tu carpeta y un FUENTES.md con URLs y fecha (opción A), o la huella del archivo verificada (opción B).</p></div></section><section class="nivel" id="nivel-2">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="03-datos-n2"> <span>Nivel 2</span></label>
+<h2>¿Qué falta?</h2><span class="min">5 min</span></div>
+<pre><code>Antes de graficar, crea un notebook de Python en mi-trabajo/ y haz una tabla de
+cobertura: qué porcentaje de años tiene dato cada país en cada indicador.
+Dime qué países o indicadores tienen huecos que podrían sesgar los promedios.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> revisar los datos faltantes <strong>antes</strong> de graficar evita conclusiones falsas.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla de cobertura con el % de años con dato por país e indicador.</p></div></section><section class="nivel" id="nivel-3">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="03-datos-n3"> <span>Nivel 3</span></label>
+<h2>Gráficas que cuentan algo</h2><span class="min">10 min</span></div>
+<pre><code>Agrega al notebook tres gráficas:
+1. La tasa de homicidios de México frente a la mediana del resto de los países
+   (los demás países en gris de fondo).
+2. Homicidios en el último año disponible, país por país, con México resaltado.
+3. Dispersión del Gini contra los homicidios (promedios 2015–2023), con la correlación
+   de Spearman en el título.
+Usa pocos colores (México en un solo color fuerte), títulos que digan el hallazgo,
+y la fuente al pie de cada gráfica. Guárdalas como PNG.
+</code></pre>
+<p>Pide ajustes en lenguaje natural: <em>"la etiqueta del eje se corta"</em>, <em>"pon los nombres en español"</em>, <em>"quita la cuadrícula vertical"</em>.</p>
+<p>💡 <em>Qué aprendes:</em> un <strong>título que afirma algo</strong> se lee mejor que un título descriptivo. Pero entonces el título tiene que ser cierto.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Tres archivos PNG con fuente al pie y un título que afirma algo.</p></div></section><section class="nivel" id="nivel-4">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="03-datos-n4"> <span>Nivel 4</span></label>
+<h2>Un modelo y sus límites</h2><span class="min">6 min</span></div>
+<pre><code>Estima un modelo de panel con efectos fijos de país y de año: homicidios en función
+de log(PIB per cápita), Gini y desempleo, con errores estándar agrupados por país.
+Explícame el resultado en lenguaje llano y dime sus tres principales limitaciones.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code puede estimar el modelo, pero <strong>la discusión de identificación</strong> te toca a ti.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla de coeficientes y una explicación en lenguaje llano con 3 limitaciones.</p></div></section><section class="nivel" id="nivel-5">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="03-datos-n5"> <span>Nivel 5</span></label>
+<h2>Revisar y compartir</h2><span class="min">6 min</span></div>
+<pre><code>Escribe una sección final &quot;Lectura y límites&quot; con 4 viñetas. Después, verifica cada
+afirmación contra los números calculados en el notebook y muéstrame una tabla:
+afirmación, número que la respalda, ¿coincide?
+Al final, exporta un reporte HTML sin código para compartir.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> <strong>audita el texto contra los números.</strong> Al preparar el ejemplo, esta revisión encontró una afirmación sobre El Salvador que los datos contradecían.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla “afirmación – número – ¿coincide?” y un reporte HTML sin código.</p></div></section><section class="extra"><h2>Retos para quien termine antes</h2>
+<pre><code>Contrasta la serie de homicidios de México del Banco Mundial con la de INEGI
+(defunciones por homicidio). ¿Coinciden? ¿Por qué podrían diferir?
+</code></pre>
+<pre><code>Traduce todo el análisis a un script de R con ggplot2 (o a un do-file de Stata).
+</code></pre>
+<pre><code>Convierte las tres gráficas en una sola figura de paneles, lista para un artículo.
+</code></pre></section><section class="extra"><h2>Reglas de oro</h2>
+<ol>
+<li><strong>Mira los datos faltantes antes que las gráficas.</strong></li>
+<li><strong>Un título que afirma, tiene que ser verdad.</strong> Verifícalo.</li>
+<li><strong>Correlación no es causalidad</strong>, y un modelo con 17 países es exploratorio.</li>
+</ol></section>
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruta 06 · Fuentes auditables · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html">Antes del taller</a><a href="primeros-pasos.html">Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" class=sub>03 · Datos</a><a href="ruta-04.html" class=sub>04 · Literatura</a><a href="ruta-05.html" class=sub>05 · Cualitativo</a><a href="ruta-06.html" aria-current=page class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html">⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Ruta 06 · Fuentes auditables</h1><p class="subtitulo">🔎 Notebook que obtiene microdatos de INEGI, replica la tasa de informalidad y la valida contra lo publicado.</p>
+<div class="resumen">
+<div><p class="et">Te llevas</p><p>Notebook que obtiene microdatos de INEGI, replica la tasa de informalidad y la valida contra lo publicado.</p></div>
+<div><p class="et">Ideal para</p><p>Quien usa estadísticas oficiales y quiere que cualquiera pueda replicarlas.</p></div>
+<div><p class="et">Tiempo</p><p>≈35 min en 5 niveles</p></div>
+<div><p class="et">Programación</p><p>Python (Jupyter o Colab)</p></div>
+</div>
+<div class="dos-col">
+<div class="tarjeta"><p class="et">📥 Insumos</p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/tree/main/06-fuentes-auditables/datos">Datos de INEGI y OIT (carpeta)</a></li><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/06-fuentes-auditables/datos/FUENTES.md">Fuentes y huellas</a></li></ul></div>
+<div class="tarjeta"><p class="et">🏁 Ejemplo terminado <small>(míralo después de intentarlo)</small></p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/06-fuentes-auditables/ejemplo-final/informalidad_auditable.ipynb">Notebook de ejemplo</a></li><li><a href="https://colab.research.google.com/github/benjov/taller-claude-code-cide/blob/main/06-fuentes-auditables/ejemplo-final/informalidad_auditable.ipynb">Abrir el ejemplo en Colab</a></li></ul></div>
+</div>
+<div class="progreso" data-ruta="06-fuentes-auditables"><div class="barra-p"><span></span></div><p></p></div>
+<div class="caja info"><p class="caja-t">Antes de empezar</p><p>En Claude Code, con la carpeta del repositorio abierta, trabajarás en <code>06-fuentes-auditables/mi-trabajo/</code>. Copia cada prompt con el botón <b>Copiar</b>, pégalo, <b>lee lo que Claude propone</b> y aprueba. Marca cada nivel al terminarlo.</p></div>
+<details class="detalles"><summary>📖 Detalles de la ruta: opciones de insumos, ética y la lección principal</summary><h2>¿Para quién es esta ruta?</h2>
+<p>Para quien trabaja con <strong>estadísticas oficiales</strong> y quiere que cualquier colega, dictaminador o estudiante pueda <strong>saber de dónde salió cada cifra, verificarla y replicarla</strong>.</p>
+<h2>Qué te llevas al final (≈35 min)</h2>
+<p>Un <strong>notebook de Jupyter</strong> (o Colab) construido por Claude Code que:</p>
+<ol>
+<li><strong>Descarga</strong> los microdatos oficiales de la ENOE (INEGI) directamente de la fuente.</li>
+<li>Registra cada descarga en una <strong>bitácora de fuentes</strong>: URL, institución, fecha de consulta y huella digital (SHA-256) del archivo.</li>
+<li><strong>Calcula</strong> la Tasa de Informalidad Laboral (TIL1) nacional y por entidad.</li>
+<li><strong>Valida</strong> tu cálculo contra las cifras publicadas por INEGI en sus boletines.</li>
+<li><strong>Verifica</strong> que los enlaces sigan funcionando.</li>
+<li>Exporta todo a <strong>Excel</strong> (y, si quieres, un <strong>anexo metodológico en Word</strong>).</li>
+</ol>
+<p>👉 Mira <code>ejemplo-final/</code> para ver cómo luce el producto terminado. <strong>Cuidado: es la meta, no el punto de partida.</strong> La gracia es que tú le pidas a Claude Code que lo construya.</p>
+<h2>Datos reales, no sintéticos</h2>
+<p>Esta ruta trabaja con <strong>datos públicos reales</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Fuente</th>
+<th>Qué es</th>
+<th>Tamaño</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>INEGI · ENOE 2T-2026, datos abiertos</td>
+<td>Microdatos de la encuesta de empleo</td>
+<td>~41 MB (zip)</td>
+</tr>
+<tr>
+<td>INEGI · Boletines de prensa ENOE (25-ago-2026)</td>
+<td>Cifras oficiales publicadas para validar</td>
+<td>PDF</td>
+</tr>
+<tr>
+<td>OIT · ILOSTAT</td>
+<td>Serie anual de empleo informal, México</td>
+<td>CSV pequeño</td>
+</tr>
+</tbody>
+</table>
+<h3>Dos caminos: tú decides</h3>
+<table>
+<thead>
+<tr>
+<th>Camino</th>
+<th>Qué haces</th>
+<th>Cuándo elegirlo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A · Descarga desde la fuente</strong></td>
+<td>Le pides a Claude Code que encuentre y descargue los datos del sitio de INEGI</td>
+<td>Quieres ver a Claude Code buscar, descargar y documentar como lo haría un asistente de investigación</td>
+</tr>
+<tr>
+<td><strong>B · Datos del repositorio</strong></td>
+<td>Usas las copias que ya vienen en <code>datos/</code> (ver <code>datos/FUENTES.md</code>)</td>
+<td>La red está lenta o prefieres dedicar el tiempo al análisis</td>
+</tr>
+</tbody>
+</table>
+<p>En <strong>ambos caminos</strong> la bitácora registra la URL original y la huella SHA-256. Si eliges el A, puedes comprobar que tu descarga es <strong>idéntica</strong> a la copia del repositorio. Eso también es auditar.</p>
+<h2>Elige tu formato de salida</h2>
+<table>
+<thead>
+<tr>
+<th>Si trabajas en…</th>
+<th>Pide…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python / Jupyter en tu computadora</td>
+<td>Un notebook <code>.ipynb</code> que Claude Code ejecute y pruebe</td>
+</tr>
+<tr>
+<td>Google Colab</td>
+<td>Un notebook <code>.ipynb</code> que luego <strong>subes a Colab</strong> (Claude Code no corre dentro de Colab)</td>
+</tr>
+<tr>
+<td>Excel</td>
+<td>Un libro con hojas: bitácora, resultados, validación y estado de enlaces</td>
+</tr>
+<tr>
+<td>Word</td>
+<td>Un "anexo metodológico de fuentes" listo para pegar en un artículo o reporte</td>
+</tr>
+</tbody>
+</table>
+<p>Los tres formatos salen del mismo notebook; el notebook es lo que permite <strong>replicar</strong>.</p>
+<h2>¿Quieres usar tu propio tema?</h2>
+<p>Puedes cambiar "informalidad" por otra estadística (pobreza CONEVAL, homicidios SESNSP, presupuesto SHCP, resultados electorales INE…). Usa los mismos prompts cambiando el tema. Advertencia: cada fuente tiene sus propias trampas (formatos, tokens, codificación), y eso también es aprendizaje.</p>
+<h2>Pasos</h2>
+<p>Abre <code>prompts.md</code> y sigue los niveles en orden. Cada nivel produce algo que funciona.</p>
+<h2>Dónde trabajar</h2>
+<p>Abre en Claude Code la carpeta del repositorio y trabaja en una subcarpeta nueva: <code>06-fuentes-auditables/mi-trabajo/</code>. Desde ahí los datos del repo están en <code>../datos/</code>.</p>
+<h2>Requisitos técnicos</h2>
+<ul>
+<li>App de escritorio de Claude con Claude Code (pestaña <strong>Code</strong>) y el repositorio del taller descargado (ver el <code>README.md</code> principal).</li>
+<li>Para ejecutar localmente: Python 3 con <code>pandas</code>, <code>requests</code>, <code>matplotlib</code>, <code>openpyxl</code> y <code>jupyter</code> (ver <code>ejemplo-final/requirements.txt</code>). Si falta algo, <strong>pídele a Claude Code que lo instale</strong>.</li>
+<li>Ruta Colab: solo necesitas una cuenta de Google.</li>
+</ul></details>
+<p>Copia y pega cada prompt en Claude Code (pestaña <strong>Code</strong> de la app de escritorio, con tu carpeta abierta).
+<strong>Lee lo que Claude propone antes de aprobar.</strong> Cuando pida permiso para ejecutar algo, revisa qué va a hacer.</p><section class="nivel" id="nivel-0">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="06-fuentes-auditables-n0"> <span>Nivel 0</span></label>
+<h2>Arranque</h2><span class="min">2 min</span></div>
+<pre><code>Voy a construir un análisis auditable y replicable de la informalidad laboral en México.
+Antes de hacer nada, revisa qué tengo instalado (Python y paquetes como pandas, requests,
+matplotlib, openpyxl y jupyter) y dime qué falta. No instales nada todavía.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code ve tu computadora y te explica antes de actuar.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Claude te dice qué tienes instalado y qué falta.</p></div></section><section class="nivel" id="nivel-1">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="06-fuentes-auditables-n1"> <span>Nivel 1</span></label>
+<h2>Conseguir los datos oficiales <small>Elige A o B</small></h2><span class="min">8 min</span></div>
+<h3>Opción A · Que Claude Code los descargue de INEGI</h3>
+<pre><code>Quiero calcular la Tasa de Informalidad Laboral 1 (TIL1) de México para el segundo
+trimestre de 2026 usando los microdatos de la ENOE de INEGI.
+Trabaja en la carpeta 06-fuentes-auditables/mi-trabajo/.
+
+1. Encuentra en el sitio de INEGI la URL oficial de los datos abiertos de la ENOE 2T-2026.
+2. Descárgala en mi-trabajo/datos/.
+3. Crea un archivo bitacora_fuentes.csv con: institución, descripción, URL, fecha y hora
+   de consulta, tamaño en bytes y huella SHA-256 del archivo.
+4. Compara la huella con la que aparece en 06-fuentes-auditables/datos/FUENTES.md
+   y dime si mi descarga es idéntica a la copia del repositorio.
+5. Dime qué tablas y diccionarios contiene el zip.
+</code></pre>
+<h3>Opción B · Usar la copia que ya viene en el repositorio</h3>
+<pre><code>Quiero calcular la Tasa de Informalidad Laboral 1 (TIL1) de México para el segundo
+trimestre de 2026 usando los microdatos de la ENOE de INEGI.
+Trabaja en la carpeta 06-fuentes-auditables/mi-trabajo/.
+
+1. Lee 06-fuentes-auditables/datos/FUENTES.md: ahí están los archivos, su URL original
+   y su huella SHA-256. NO descargues nada; usa los archivos de esa carpeta.
+2. Verifica que la huella SHA-256 de cada archivo coincida con la de FUENTES.md.
+3. Crea un archivo bitacora_fuentes.csv con: institución, descripción, URL original,
+   fecha de descarga, tamaño en bytes, huella SHA-256 y si coincide.
+4. Dime qué tablas y diccionarios contiene el zip de la ENOE.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> en los dos caminos Claude Code <strong>documenta la procedencia</strong>. La huella SHA-256 permite que cualquiera compruebe que usa exactamente el mismo archivo. Con la opción A, además, ves a Claude Code navegar un sitio oficial y encontrar el enlace correcto.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>El zip de la ENOE en tu carpeta y una bitácora con URL, fecha y huella SHA-256 (que coincide con la del repo).</p></div></section><section class="nivel" id="nivel-2">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="06-fuentes-auditables-n2"> <span>Nivel 2</span></label>
+<h2>El notebook replicable</h2><span class="min">12 min</span></div>
+<pre><code>Ahora crea un notebook de Jupyter llamado informalidad_auditable.ipynb que:
+
+1. Tenga una celda de parámetros (año y trimestre) para poder replicar otros periodos.
+2. Tenga un parámetro FUENTE_DATOS: &quot;repo&quot; (usar ../datos/ del repositorio) u &quot;original&quot;
+   (descargar de INEGI solo si no existe ya). En ambos casos registre todo en la bitácora.
+3. Calcule la TIL1 nacional y por entidad federativa con los criterios de INEGI
+   (explícalos en una celda de texto: qué variables, qué filtros, qué factor de expansión).
+4. Haga una gráfica de barras de la TIL1 por entidad con la fuente al pie.
+5. Explique en español cada paso para un lector que no programa.
+
+Ejecútalo completo y dime si hay errores.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code escribe, <strong>ejecuta y corrige</strong> el código. Si algo falla (spoiler: el archivo de INEGI trae una sorpresa de codificación), míralo diagnosticar.</p>
+<p><strong>Ruta Colab:</strong> agrega al final: <em>"Asegúrate de que funcione en Google Colab sin instalar nada; en Colab no existe ../datos/, así que en modo repo debe bajar los archivos de https://github.com/benjov/taller-claude-code-cide/raw/main/06-fuentes-auditables/datos/"</em>. Luego sube el <code>.ipynb</code> en colab.research.google.com → Archivo → Subir notebook.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un notebook que corre de principio a fin, con la TIL1 nacional y una gráfica por entidad.</p></div></section><section class="nivel" id="nivel-3">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="06-fuentes-auditables-n3"> <span>Nivel 3</span></label>
+<h2>Auditar: ¿mi cifra es la oficial?</h2><span class="min">8 min</span></div>
+<pre><code>Agrega al notebook una sección de validación:
+1. Busca el boletín de prensa de INEGI de la ENOE 2T-2026 (nacional) y los boletines
+   estatales de 2 o 3 entidades que me interesen: [ESCRIBE AQUÍ LAS ENTIDADES].
+2. Toma de los boletines la TIL1 total, de hombres y de mujeres, y guarda la URL de cada cifra.
+3. Compara con mi cálculo en una tabla: publicado, replicado, diferencia y si coincide.
+4. Agrega una sección que verifique que todas las URLs del notebook siguen respondiendo.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> <strong>la validación atrapa errores, incluidos los de la IA.</strong> Al preparar este taller, el ejemplo transcribió mal el orden de las columnas <em>Mujeres/Hombres</em> del boletín, y la tabla de validación lo detectó de inmediato. Por eso se valida.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla “publicado vs. replicado” con su URL de fuente.</p></div></section><section class="nivel" id="nivel-4">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="06-fuentes-auditables-n4"> <span>Nivel 4</span></label>
+<h2>Elige tu salida</h2><span class="min">5 min</span></div>
+<p><strong>Excel:</strong></p>
+<pre><code>Exporta a un Excel con hojas: bitacora_fuentes, validacion, por_entidad,
+estado_enlaces y entorno (versiones de Python y paquetes).
+</code></pre>
+<p><strong>Word:</strong></p>
+<pre><code>Genera un documento Word &quot;Anexo metodológico de fuentes&quot; con: fuentes consultadas
+(con fecha de consulta y URL), criterios de cálculo, tabla de validación contra cifras
+oficiales y la gráfica. Redáctalo en estilo académico, listo para un artículo.
+</code></pre><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un Excel con la bitácora y los resultados, o un anexo metodológico en Word.</p></div></section><section class="extra"><h2>Retos para quien termine antes</h2>
+<pre><code>Agrega la serie de informalidad de ILOSTAT (OIT) para México y compárala con la de INEGI.
+Explica por qué no coinciden exactamente.
+</code></pre>
+<pre><code>Repite el cálculo para el 2T-2025 cambiando solo los parámetros y muestra el cambio por entidad.
+</code></pre>
+<pre><code>Escribe un CLAUDE.md para este proyecto con las fuentes, criterios y decisiones
+metodológicas, para que la próxima vez retomemos donde nos quedamos.
+</code></pre></section><section class="extra"><h2>Reglas de oro</h2>
+<ol>
+<li><strong>Toda cifra debe tener una fuente en la bitácora.</strong> Si Claude te da un número sin URL, pídesela.</li>
+<li><strong>Valida contra lo publicado.</strong> Una réplica que no se compara no es una réplica.</li>
+<li><strong>Lee antes de aprobar.</strong> Tú eres la autoridad académica; Claude Code es el asistente de investigación.</li>
+</ol></section>
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antes del taller · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html" aria-current=page>Antes del taller</a><a href="primeros-pasos.html">Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" class=sub>03 · Datos</a><a href="ruta-04.html" class=sub>04 · Literatura</a><a href="ruta-05.html" class=sub>05 · Cualitativo</a><a href="ruta-06.html" class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html">⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Antes del taller</h1><p class="subtitulo">Lista de verificación: márcala conforme avanzas (se guarda en tu navegador)</p>
+
+<p class="lead">Haz esto <b>antes de llegar</b> (10–15 minutos). Si llegas con todo listo, aprovechas los 60 minutos completos.</p>
+<div class="caja aviso"><p class="caja-t">⚠️ Requisito indispensable</p><p>Claude Code requiere un plan de pago de Claude: <b>Pro, Max, Ultra, Team o Enterprise</b>. <b>El plan gratuito no incluye Claude Code.</b> Si tu institución te dio una cuenta, verifica con ella que incluya Claude Code.</p></div>
+<ol class="checklist">
+<li><label><input type="checkbox" data-clave="antes-1"> <b>Instala la app de escritorio de Claude</b></label>
+<p>Descárgala de <a href="https://claude.com/download">claude.com/download</a> (macOS o Windows) e inicia sesión con tu cuenta.</p></li>
+<li><label><input type="checkbox" data-clave="antes-2"> <b>Encuentra la pestaña <span class="ui">Code</span></b></label>
+<p>En la app verás la pestaña <span class="ui">Code</span>. Ahí trabajaremos todo el taller (no en el chat normal).</p></li>
+<li><label><input type="checkbox" data-clave="antes-3"> <b>Descarga el repositorio del taller</b> (~43 MB, incluye datos)</label>
+<p>Elige <b>una</b> forma:</p>
+<ul><li><b>Sin saber Git</b> (recomendado): <a class="boton" href="https://github.com/benjov/taller-claude-code-cide/archive/refs/heads/main.zip">⬇ Descargar ZIP</a> y descomprímelo en tu carpeta <i>Documentos</i>.</li>
+<li><b>Con Claude Code:</b> en la pestaña Code, abre cualquier carpeta y pega:
+<pre><code>Clona el repositorio https://github.com/benjov/taller-claude-code-cide en mi carpeta Documentos</code></pre></li>
+<li><b>Con Git:</b> <code>git clone https://github.com/benjov/taller-claude-code-cide.git</code></li></ul></li>
+<li><label><input type="checkbox" data-clave="antes-4"> <b>Abre la carpeta del taller en Claude Code</b></label>
+<p>En la pestaña <span class="ui">Code</span>, debajo del cuadro de texto, está el selector de carpeta. Elige la carpeta
+<code>taller-claude-code-cide</code> (o <code>taller-claude-code-cide-main</code> si la descargaste como ZIP).</p></li>
+<li><label><input type="checkbox" data-clave="antes-5"> <b>Haz la prueba de humo</b></label>
+<p>Pega este prompt y envíalo:</p>
+<pre><code>Hola. Lee el README.md de esta carpeta y dime en 3 líneas de qué trata este taller y qué rutas hay.</code></pre>
+<p>✅ Si te responde con un resumen del taller y la lista de rutas, <b>estás lista o listo</b>.</p></li>
+<li><label><input type="checkbox" data-clave="antes-6"> <b>(Solo rutas 03 y 06) Revisa Python</b></label>
+<p>Pega este prompt:</p>
+<pre><code>¿Tengo Python 3 instalado con pandas, matplotlib, requests, openpyxl y jupyter? Dímelo sin instalar nada.</code></pre>
+<p>Si falta algo, no te preocupes: en el taller se lo pedimos a Claude Code o usamos <b>Google Colab</b> (solo necesitas una cuenta de Google).</p></li>
+</ol>
+<h2>¿No tienes la app de escritorio?</h2>
+<p>Puedes usar <b>Claude Code en la web</b> (<a href="https://claude.ai/code">claude.ai/code</a>). Corre en la nube de Anthropic y trabaja sobre repositorios de GitHub:</p>
+<ol><li>Necesitas una cuenta de GitHub y conectarla a Claude cuando te lo pida.</li>
+<li>El repositorio del taller es público. Lo más sencillo es hacer un <b>fork</b> (copia en tu cuenta) desde <a href="https://github.com/benjov/taller-claude-code-cide">la página del repo</a> con el botón <span class="ui">Fork</span>, y abrir la sesión sobre tu copia.</li>
+<li>Los archivos que cree Claude quedan en la nube; pídele que los guarde en tu fork para verlos y descargarlos desde GitHub.</li></ol>
+<div class="caja info"><p class="caja-t">Recomendación</p><p>Para este taller la <b>app de escritorio</b> es más sencilla: trabajas con archivos de tu computadora y ves los resultados al instante.</p></div>
+<h2>¿Qué ruta voy a elegir?</h2><p>No hace falta decidir ahora, pero puedes ver las opciones en <a href="rutas.html">Elige tu ruta</a>.</p>
+
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>

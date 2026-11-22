@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reloj de la sesión · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html">Antes del taller</a><a href="primeros-pasos.html">Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" class=sub>03 · Datos</a><a href="ruta-04.html" class=sub>04 · Literatura</a><a href="ruta-05.html" class=sub>05 · Cualitativo</a><a href="ruta-06.html" class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html" aria-current=page>⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Reloj de la sesión</h1><p class="subtitulo">Para proyectar durante el taller</p>
+
+<div class="reloj" id="reloj">
+<div class="reloj-fase"><p class="et">Fase actual</p><p id="fase-nombre">—</p><p id="fase-desc" class="tenue"></p></div>
+<div class="reloj-num"><p class="et">Quedan en esta fase</p><p id="fase-resta">--:--</p><p class="tenue">Transcurrido: <span id="total">00:00</span> de 60:00</p></div>
+<div class="reloj-barra"><span id="barra-total"></span></div>
+<div class="reloj-ctrl"><button id="iniciar" class="boton">▶ Iniciar sesión</button>
+<button id="pausar" class="boton sec">⏸ Pausar</button><button id="reiniciar" class="boton sec">↺ Reiniciar</button>
+<button id="pantalla" class="boton sec">⛶ Pantalla completa</button></div>
+</div>
+<ol class="agenda" id="agenda"><li data-ini="0" data-fin="5"><b>Bienvenida y demo</b> <span>0–5 min</span><p>La persona que facilita muestra, en vivo, un CV convertido en página web en 3 minutos.</p></li><li data-ini="5" data-fin="15"><b>Primeros pasos</b> <span>5–15 min</span><p>Todas y todos abren Claude Code, eligen la carpeta del taller, conocen los permisos y eligen ruta.</p></li><li data-ini="15" data-fin="50"><b>Trabajo por rutas</b> <span>15–50 min</span><p>Cada quien avanza por los niveles de su ruta. Ayudantes recorren el salón.</p></li><li data-ini="50" data-fin="57"><b>Galería</b> <span>50–57 min</span><p>3 o 4 voluntarios muestran su producto en pantalla (1–2 minutos cada uno).</p></li><li data-ini="57" data-fin="60"><b>Cierre</b> <span>57–60 min</span><p>Reglas de oro y cómo seguir usando Claude Code en tu trabajo.</p></li></ol>
+<div class="caja info"><p class="caja-t">Para quien facilita</p><p>Durante el trabajo por rutas (minutos 15–50), anuncia en voz alta: al minuto <b>30</b> (“deberían ir en el nivel 2”), al <b>40</b> (“pasen al nivel de verificación aunque no hayan terminado los anteriores”) y al <b>47</b> (“guarden y prepárense para la galería”). El reloj sobrevive a recargar la página.</p></div>
+
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>

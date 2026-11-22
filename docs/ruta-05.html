@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruta 05 · Cualitativo · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html">Antes del taller</a><a href="primeros-pasos.html">Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" class=sub>03 · Datos</a><a href="ruta-04.html" class=sub>04 · Literatura</a><a href="ruta-05.html" aria-current=page class=sub>05 · Cualitativo</a><a href="ruta-06.html" class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html">⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Ruta 05 · Cualitativo</h1><p class="subtitulo">🗣️ Anonimización, libro de códigos, matriz de codificación con citas verificadas e informe de hallazgos.</p>
+<div class="resumen">
+<div><p class="et">Te llevas</p><p>Anonimización, libro de códigos, matriz de codificación con citas verificadas e informe de hallazgos.</p></div>
+<div><p class="et">Ideal para</p><p>Quien trabaja con entrevistas, grupos focales o documentos.</p></div>
+<div><p class="et">Tiempo</p><p>≈35 min en 6 niveles</p></div>
+<div><p class="et">Programación</p><p>Ninguno</p></div>
+</div>
+<div class="dos-col">
+<div class="tarjeta"><p class="et">📥 Insumos</p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/tree/main/05-cualitativo/insumos/entrevistas">6 entrevistas ficticias (carpeta)</a></li><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/05-cualitativo/insumos/proyecto_y_guia.docx">Proyecto y guía de entrevista</a></li></ul></div>
+<div class="tarjeta"><p class="et">🏁 Ejemplo terminado <small>(míralo después de intentarlo)</small></p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/tree/main/05-cualitativo/ejemplo-final">Carpeta del ejemplo final</a></li></ul></div>
+</div>
+<div class="progreso" data-ruta="05-cualitativo"><div class="barra-p"><span></span></div><p></p></div>
+<div class="caja info"><p class="caja-t">Antes de empezar</p><p>En Claude Code, con la carpeta del repositorio abierta, trabajarás en <code>05-cualitativo/mi-trabajo/</code>. Copia cada prompt con el botón <b>Copiar</b>, pégalo, <b>lee lo que Claude propone</b> y aprueba. Marca cada nivel al terminarlo.</p></div>
+<details class="detalles"><summary>📖 Detalles de la ruta: opciones de insumos, ética y la lección principal</summary><h2>¿Para quién es esta ruta?</h2>
+<p>Para quien trabaja con entrevistas, grupos focales o documentos, y quiere ver cómo Claude Code puede <strong>acelerar la codificación sin perder el control interpretativo</strong>.</p>
+<h2>Qué te llevas al final (≈35 min)</h2>
+<ol>
+<li>Una <strong>revisión de anonimización</strong>: datos identificables detectados y reemplazados antes de analizar.</li>
+<li>Un <strong>libro de códigos</strong> en Excel: código, definición, cuándo incluir, cuándo excluir y un ejemplo con cita.</li>
+<li>Una <strong>matriz de codificación</strong>: cada segmento <strong>literal</strong>, con entrevista, turno y códigos.</li>
+<li>Un <strong>informe de hallazgos</strong> en Word con citas trazables y una sección de límites.</li>
+</ol>
+<p>👉 Mira <code>ejemplo-final/</code> para ver la meta (después de intentarlo).</p>
+<h2>Los materiales del kit</h2>
+<p><code>insumos/entrevistas/</code>: <strong>6 entrevistas ficticias</strong> con mujeres que trabajan en el comercio informal de la Ciudad de México, más <code>insumos/proyecto_y_guia.docx</code>, con la pregunta de investigación y la guía de entrevista.
+Las personas, los nombres y los datos son <strong>inventados</strong>.</p>
+<h2>⚠️ ¿Y mis entrevistas reales?</h2>
+<p><strong>Para el taller usa las ficticias.</strong> Antes de usar Claude Code con entrevistas reales:
+- Revisa qué aprobó tu <strong>comité de ética</strong> y qué dice tu <strong>consentimiento informado</strong> sobre el uso de herramientas externas.
+- Revisa la <strong>política de manejo de datos</strong> de tu plan de Claude (personal o institucional).
+- <strong>Anonimiza antes</strong> de compartir cualquier transcripción, y nunca uses datos que permitan identificar a alguien en riesgo.</p>
+<h2>Dónde trabajar</h2>
+<p>Abre en Claude Code la carpeta del repositorio y trabaja en <code>05-cualitativo/mi-trabajo/</code>.</p>
+<h2>Pasos</h2>
+<p>Abre <code>prompts.md</code> y sigue los niveles en orden.</p>
+<h2>La lección de esta ruta</h2>
+<p>La IA puede proponer códigos y encontrar segmentos en segundos, pero <strong>la interpretación es tuya</strong>. Esta ruta practica tres controles:
+1. <strong>Anonimizar primero.</strong>
+2. <strong>Citas literales y trazables</strong> (entrevista y turno), verificadas automáticamente.
+3. <strong>No generalizar de más</strong>: un tema que aparece en una entrevista es un hallazgo, no una tendencia.</p></details>
+<p>Copia y pega cada prompt en Claude Code (pestaña <strong>Code</strong>, con la carpeta del repositorio abierta).</p><section class="nivel" id="nivel-0">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="05-cualitativo-n0"> <span>Nivel 0</span></label>
+<h2>Anonimizar antes de analizar <small>⚠️</small></h2><span class="min">5 min</span></div>
+<pre><code>Crea la carpeta 05-cualitativo/mi-trabajo/ y trabaja ahí.
+Revisa las entrevistas de 05-cualitativo/insumos/entrevistas/ y busca cualquier dato que
+permita identificar a una persona: nombres propios (de la participante o de terceros),
+teléfonos, direcciones o lugares exactos, nombres de negocios.
+Dame una tabla (entrevista, turno, tipo de dato, reemplazo sugerido) SIN copiar el dato
+original. Después crea versiones anonimizadas en mi-trabajo/entrevistas_anon/ y
+trabaja solo con esas.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> la anonimización es el <strong>primer</strong> paso, no el último.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla de datos identificables <b>sin copiar el dato original</b>, y la carpeta <code>entrevistas_anon/</code>.</p></div></section><section class="nivel" id="nivel-1">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="05-cualitativo-n1"> <span>Nivel 1</span></label>
+<h2>Conocer el material</h2><span class="min">3 min</span></div>
+<pre><code>Lee 05-cualitativo/insumos/proyecto_y_guia.docx y las entrevistas anonimizadas.
+Dame un perfil de una línea de cada participante y los temas que más se repiten,
+indicando en cuántas de las 6 entrevistas aparece cada tema.
+</code></pre><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un perfil de una línea por participante y los temas, con “n de 6”.</p></div></section><section class="nivel" id="nivel-2">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="05-cualitativo-n2"> <span>Nivel 2</span></label>
+<h2>Libro de códigos</h2><span class="min">8 min</span></div>
+<pre><code>Propón un libro de códigos inicial (8 a 10 códigos) para la pregunta de investigación.
+Para cada código: clave corta, nombre, definición, cuándo incluir, cuándo excluir y un
+ejemplo con cita literal (entrevista y turno). Combina códigos de la guía de entrevista
+(deductivos) con los que surjan del material (inductivos), y marca cuáles son cuáles.
+No codifiques todavía; espera mi revisión.
+</code></pre>
+<p>Revisa y ajusta en lenguaje natural:</p>
+<pre><code>Fusiona [X] y [Y]. Separa [Z] en dos códigos. Cambia la definición de [W] para que excluya [...].
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> <strong>tú</strong> decides las categorías analíticas; la IA las propone y las documenta.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un libro de códigos con definiciones y criterios de inclusión y exclusión. Revísalo antes de codificar.</p></div></section><section class="nivel" id="nivel-3">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="05-cualitativo-n3"> <span>Nivel 3</span></label>
+<h2>Codificar</h2><span class="min">10 min</span></div>
+<pre><code>Codifica las 6 entrevistas con el libro de códigos aprobado. Guarda en
+mi-trabajo/codificacion.xlsx una matriz con: entrevista, turno, segmento LITERAL y
+código(s). Agrega una hoja con la presencia de cada código por entrevista.
+Al terminar, verifica con un script que cada segmento aparezca palabra por palabra
+en su entrevista, y dime cuáles no pasaron.
+Señala también los segmentos ambiguos o contradictorios dentro de una misma entrevista.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> la verificación automática hace <strong>trazable</strong> cada cita. Fíjate qué hace Claude con una participante que se contradice.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un Excel con segmentos literales y el resultado de la verificación automática.</p></div></section><section class="nivel" id="nivel-4">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="05-cualitativo-n4"> <span>Nivel 4</span></label>
+<h2>Informe de hallazgos</h2><span class="min">6 min</span></div>
+<pre><code>Redacta en Word (mi-trabajo/informe_hallazgos.docx) un informe breve organizado por
+temas. Para cada tema: en cuántas entrevistas aparece (n de 6), 1 o 2 citas literales
+con entrevista y turno, y los casos contrastantes. Agrega una sección
+&quot;Temas con evidencia limitada&quot; y otra de &quot;Limitaciones y reflexividad&quot;.
+No uses palabras como &quot;todas&quot;, &quot;la mayoría&quot; o &quot;en general&quot; si no lo respaldan los conteos.
+</code></pre><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un informe en Word con conteos (n de 6), citas con entrevista y turno, y límites.</p></div></section><section class="nivel" id="nivel-5">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="05-cualitativo-n5"> <span>Nivel 5</span></label>
+<h2>Auditar el informe</h2><span class="min">3 min</span></div>
+<pre><code>Revisa el informe contra la matriz de codificación: para cada afirmación con número
+o cuantificador (&quot;en 4 de 6&quot;, &quot;varias&quot;, &quot;las comerciantes…&quot;), comprueba que coincida
+con los conteos. Dame una tabla de afirmaciones que no cuadren.
+</code></pre><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla de afirmaciones del informe que no cuadran con los conteos.</p></div></section><section class="extra"><h2>Retos para quien termine antes</h2>
+<pre><code>Haz una segunda codificación independiente de 2 entrevistas sin ver la primera, compara
+ambas y calcula el porcentaje de acuerdo por código. ¿Dónde difieren y por qué?
+</code></pre>
+<pre><code>Exporta la matriz en un formato que pueda importar a [ATLAS.ti / NVivo / MAXQDA / Taguette].
+</code></pre>
+<pre><code>Escribe un CLAUDE.md en mi-trabajo/ con mis reglas de codificación y anonimización
+para reutilizarlas en mi proyecto real.
+</code></pre></section><section class="extra"><h2>Reglas de oro</h2>
+<ol>
+<li><strong>Anonimiza antes de analizar.</strong></li>
+<li><strong>Toda cita, literal y con su ubicación.</strong></li>
+<li><strong>Cuenta antes de generalizar.</strong></li>
+</ol></section>
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>

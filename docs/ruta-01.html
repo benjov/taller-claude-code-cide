@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruta 01 · Web académica · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html">Antes del taller</a><a href="primeros-pasos.html">Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" aria-current=page class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" class=sub>03 · Datos</a><a href="ruta-04.html" class=sub>04 · Literatura</a><a href="ruta-05.html" class=sub>05 · Cualitativo</a><a href="ruta-06.html" class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html">⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Ruta 01 · Web académica</h1><p class="subtitulo">🌐 Tu página web académica personal (un solo archivo HTML), creada desde tu CV.</p>
+<div class="resumen">
+<div><p class="et">Te llevas</p><p>Tu página web académica personal (un solo archivo HTML), creada desde tu CV.</p></div>
+<div><p class="et">Ideal para</p><p>Quien quiere una página propia, bonita y fácil de actualizar.</p></div>
+<div><p class="et">Tiempo</p><p>≈34 min en 6 niveles</p></div>
+<div><p class="et">Programación</p><p>Ninguno (HTML lo escribe Claude)</p></div>
+</div>
+<div class="dos-col">
+<div class="tarjeta"><p class="et">📥 Insumos</p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/01-web-academica/insumos/cv_ficticio.pdf">CV ficticio (PDF)</a></li><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/01-web-academica/insumos/cv_ficticio.docx">CV ficticio (Word)</a></li></ul></div>
+<div class="tarjeta"><p class="et">🏁 Ejemplo terminado <small>(míralo después de intentarlo)</small></p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/blob/main/01-web-academica/ejemplo-final/index.html">Página de ejemplo (código)</a></li></ul></div>
+</div>
+<div class="progreso" data-ruta="01-web-academica"><div class="barra-p"><span></span></div><p></p></div>
+<div class="caja info"><p class="caja-t">Antes de empezar</p><p>En Claude Code, con la carpeta del repositorio abierta, trabajarás en <code>01-web-academica/mi-sitio/</code>. Copia cada prompt con el botón <b>Copiar</b>, pégalo, <b>lee lo que Claude propone</b> y aprueba. Marca cada nivel al terminarlo.</p></div>
+<details class="detalles"><summary>📖 Detalles de la ruta: opciones de insumos, ética y la lección principal</summary><h2>¿Para quién es esta ruta?</h2>
+<p>Para quien quiere una <strong>página web académica propia</strong>, bonita, rápida y fácil de actualizar, sin saber programar y sin depender del sitio institucional.</p>
+<h2>Qué te llevas al final (≈35 min)</h2>
+<p>Un archivo <code>index.html</code> <strong>que es tu sitio completo</strong>:
+- Presentación, líneas de investigación, publicaciones, proyectos, docencia y contacto.
+- Publicaciones con <strong>filtro por tipo, buscador</strong> y botones para <strong>copiar la cita o el BibTeX</strong>.
+- Se ve bien en celular, tiene modo oscuro y se imprime limpio.
+- Funciona con solo abrirlo en el navegador. Para publicarlo en internet basta subir ese archivo.</p>
+<p>👉 Abre <code>ejemplo-final/index.html</code> en tu navegador para ver la meta. <strong>Es el punto de llegada, no el de partida.</strong></p>
+<h2>Tu CV o el ficticio: tú decides</h2>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué usas</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Tu CV</strong></td>
+<td>Copia tu CV (PDF o Word) en la carpeta <code>01-web-academica/mi-sitio/</code></td>
+<td>Antes de usarlo, <strong>quita los datos que no publicarías</strong>: teléfono, domicilio, CURP, RFC</td>
+</tr>
+<tr>
+<td><strong>CV ficticio</strong></td>
+<td><code>insumos/cv_ficticio.pdf</code> o <code>insumos/cv_ficticio.docx</code></td>
+<td>La Dra. Valeria Ejemplo Ruiz <strong>no existe</strong>: su institución, revistas y DOIs son inventados</td>
+</tr>
+</tbody>
+</table>
+<p>Con el ficticio practicas sin presión y después repites todo en casa con tu CV en 15 minutos.</p>
+<h2>Dónde trabajar</h2>
+<p>Abre en Claude Code la carpeta del repositorio y trabaja en <code>01-web-academica/mi-sitio/</code> (pídele a Claude Code que la cree).</p>
+<h2>Pasos</h2>
+<p>Abre <code>prompts.md</code> y sigue los niveles en orden. Cada nivel deja una página que ya funciona.</p>
+<h2>La lección más importante de esta ruta</h2>
+<p>Claude Code escribe muy bien, y por eso mismo <strong>puede embellecer</strong>: inventar un premio, redondear una fecha o agregar una línea de investigación que suena bien. El nivel 5 enseña a <strong>auditar que todo lo publicado salga de tu CV</strong>. Es tu nombre el que va en la página.</p>
+<h2>Para publicarla (opcional, en casa)</h2>
+<p>Pídele a Claude Code: <em>"Explícame paso a paso cómo publicar este index.html gratis en GitHub Pages"</em>. También sirve cualquier hosting donde puedas subir un archivo, incluido el espacio web de tu institución.</p></details>
+<p>Copia y pega cada prompt en Claude Code (pestaña <strong>Code</strong> de la app de escritorio, con la carpeta del repositorio abierta).
+Donde dice <code>[MI CV]</code> escribe la ruta de tu archivo, por ejemplo <code>01-web-academica/mi-sitio/cv.pdf</code> o <code>01-web-academica/insumos/cv_ficticio.pdf</code>.</p><section class="nivel" id="nivel-0">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="01-web-academica-n0"> <span>Nivel 0</span></label>
+<h2>Que Claude conozca tu material</h2><span class="min">3 min</span></div>
+<pre><code>Crea la carpeta 01-web-academica/mi-sitio/ y trabaja ahí.
+Lee [MI CV] y hazme un resumen en 5 viñetas: quién soy, qué investigo,
+mis publicaciones más importantes, qué enseño y cómo contactarme.
+No escribas ningún archivo todavía.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code <strong>lee tus archivos</strong> (PDF, Word) directamente. No hace falta copiar y pegar.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un resumen en 5 viñetas con la información del CV. Ningún archivo nuevo todavía.</p></div></section><section class="nivel" id="nivel-1">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="01-web-academica-n1"> <span>Nivel 1</span></label>
+<h2>Planear antes de construir</h2><span class="min">4 min</span></div>
+<pre><code>Quiero una página web académica personal de una sola página, a partir de mi CV.
+Antes de escribir código, propónme:
+1. Las secciones y su orden.
+2. Un texto de presentación de 3–4 líneas en primera persona, claro para un público
+   no especializado (periodistas, estudiantes, funcionarios).
+3. Dos opciones de estilo visual (colores y tipografía) descritas en una línea cada una.
+Espera mi visto bueno.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> pedir <strong>un plan primero</strong> te da el control. Corrige lo que no te guste antes de que exista una sola línea de código.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Claude propone secciones, un texto de presentación y 2 estilos… y <b>espera tu visto bueno</b>.</p></div></section><section class="nivel" id="nivel-2">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="01-web-academica-n2"> <span>Nivel 2</span></label>
+<h2>Construir la página</h2><span class="min">8 min</span></div>
+<pre><code>Me gusta el plan [agrega aquí tus ajustes, p. ej. &quot;usa la opción 2 de estilo&quot;].
+Construye index.html en mi-sitio/:
+- Un solo archivo autocontenido (HTML, CSS y JavaScript juntos), sin dependencias externas.
+- Que se vea bien en celular y tenga modo oscuro automático.
+- Las publicaciones guardadas como una lista de datos en JavaScript, para que sea fácil
+  agregar nuevas después.
+- Usa ÚNICAMENTE información que esté en mi CV.
+Al terminar, ábrela en mi navegador.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code <strong>crea archivos y los abre</strong>. Tienes un sitio funcionando en minutos.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un archivo <code>index.html</code> en <code>mi-sitio/</code> que se abre en tu navegador (o en el panel <b>Browser</b> de la app).</p></div></section><section class="nivel" id="nivel-3">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="01-web-academica-n3"> <span>Nivel 3</span></label>
+<h2>Hacerla tuya</h2><span class="min">8 min</span></div>
+<p>Elige uno o varios cambios. Pídelos <strong>en lenguaje natural</strong>, como se los pedirías a un asistente:</p>
+<pre><code>El azul se ve muy corporativo; usa un verde oscuro más sobrio.
+</code></pre>
+<pre><code>La presentación suena muy formal. Reescríbela más cercana, sin perder seriedad.
+</code></pre>
+<pre><code>Puse una foto mía en mi-sitio/foto.jpg. Úsala en lugar del círculo con iniciales.
+</code></pre>
+<pre><code>Agrega una sección &quot;Noticias&quot; arriba de Publicaciones con dos entradas recientes:
+[describe tus noticias].
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> se itera conversando. No necesitas saber CSS para decir "más sobrio".</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Al recargar la página (Cmd+R / Ctrl+R) ves el cambio que pediste.</p></div></section><section class="nivel" id="nivel-4">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="01-web-academica-n4"> <span>Nivel 4</span></label>
+<h2>Funciones útiles</h2><span class="min">6 min</span></div>
+<pre><code>En Publicaciones agrega:
+1. Botones para filtrar por tipo (artículos, libros, capítulos).
+2. Un buscador por título, revista o coautor.
+3. En cada publicación, botones para copiar la cita en formato APA y en BibTeX.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code programa <strong>interactividad real</strong>. Pruébala en el navegador.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Los filtros funcionan y el botón “Copiar BibTeX” copia algo que puedes pegar.</p></div></section><section class="nivel" id="nivel-5">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="01-web-academica-n5"> <span>Nivel 5</span></label>
+<h2>Auditar antes de publicar <small>⚠️ No te lo saltes</small></h2><span class="min">5 min</span></div>
+<pre><code>Revisa index.html contra [MI CV] y dame una tabla con TODO dato de la página
+(fechas, títulos, cargos, premios, coautores, revistas) que NO aparezca tal cual en el CV,
+o que esté redactado de forma que cambie su significado. No corrijas nada todavía.
+</code></pre>
+<p>Luego:</p>
+<pre><code>Corrige los puntos [números] de la tabla. Además revisa la accesibilidad:
+contraste de colores, textos alternativos y que se pueda navegar con teclado.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> <strong>la IA puede embellecer.</strong> Tu reputación está en esa página, así que auditas antes de publicar, igual que con un artículo.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla con los datos de la página que NO salen del CV. Si sale vacía, pídele que revise otra vez con calma.</p></div></section><section class="extra"><h2>Retos para quien termine antes</h2>
+<pre><code>Agrega un botón para cambiar el idioma de la página entre español e inglés.
+</code></pre>
+<pre><code>Tengo mis publicaciones en un archivo .bib: [ruta]. Haz que la página tome
+la lista de publicaciones de ahí, para que solo tenga que actualizar el .bib.
+</code></pre>
+<pre><code>Escribe un CLAUDE.md en mi-sitio/ con las reglas de mi página (estilo, tono,
+cómo agregar una publicación) para que cada semestre solo te diga &quot;agrega esto&quot;.
+</code></pre>
+<pre><code>Explícame paso a paso cómo publicar esta página gratis en GitHub Pages.
+</code></pre></section><section class="extra"><h2>Reglas de oro</h2>
+<ol>
+<li><strong>Nada que no esté en tu CV.</strong> Si Claude agrega algo, pregúntale de dónde lo sacó.</li>
+<li><strong>Datos personales:</strong> no publiques lo que no pondrías en una tarjeta de presentación.</li>
+<li><strong>Lee antes de aprobar.</strong> Tú decides qué se queda.</li>
+</ol></section>
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruta 04 · Literatura · Taller Claude Code · CIDE</title>
+<link rel="stylesheet" href="estilos.css"></head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<header class="barra"><a class="marca" href="index.html">Taller <b>Claude Code</b> · CIDE</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">☰ Menú</button></header>
+<div class="marco">
+<nav id="nav" aria-label="Secciones del taller"><a href="index.html">Inicio</a><a href="antes.html">Antes del taller</a><a href="primeros-pasos.html">Primeros pasos</a><a href="rutas.html">Elige tu ruta</a><a href="ruta-01.html" class=sub>01 · Web académica</a><a href="ruta-02.html" class=sub>02 · Syllabus</a><a href="ruta-03.html" class=sub>03 · Datos</a><a href="ruta-04.html" aria-current=page class=sub>04 · Literatura</a><a href="ruta-05.html" class=sub>05 · Cualitativo</a><a href="ruta-06.html" class=sub>06 · Fuentes auditables</a><a href="cierre.html">Cierre y cómo seguir</a><a href="reloj.html">⏱ Reloj de la sesión</a><a class="repo" href="https://github.com/benjov/taller-claude-code-cide">Repositorio en GitHub ↗</a></nav>
+<main id="contenido"><h1>Ruta 04 · Literatura</h1><p class="subtitulo">📚 Matriz de revisión con citas a página, alertas de lectura crítica y referencias verificadas en Crossref.</p>
+<div class="resumen">
+<div><p class="et">Te llevas</p><p>Matriz de revisión con citas a página, alertas de lectura crítica y referencias verificadas en Crossref.</p></div>
+<div><p class="et">Ideal para</p><p>Quien prepara un estado del arte o una propuesta de investigación.</p></div>
+<div><p class="et">Tiempo</p><p>≈35 min en 6 niveles</p></div>
+<div><p class="et">Programación</p><p>Ninguno (Python para verificar, lo escribe Claude)</p></div>
+</div>
+<div class="dos-col">
+<div class="tarjeta"><p class="et">📥 Insumos</p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/tree/main/04-literatura/articulos">8 artículos ficticios (carpeta)</a></li></ul></div>
+<div class="tarjeta"><p class="et">🏁 Ejemplo terminado <small>(míralo después de intentarlo)</small></p><ul><li><a href="https://github.com/benjov/taller-claude-code-cide/tree/main/04-literatura/ejemplo-final">Carpeta del ejemplo final</a></li></ul></div>
+</div>
+<div class="progreso" data-ruta="04-literatura"><div class="barra-p"><span></span></div><p></p></div>
+<div class="caja info"><p class="caja-t">Antes de empezar</p><p>En Claude Code, con la carpeta del repositorio abierta, trabajarás en <code>04-literatura/mi-trabajo/</code>. Copia cada prompt con el botón <b>Copiar</b>, pégalo, <b>lee lo que Claude propone</b> y aprueba. Marca cada nivel al terminarlo.</p></div>
+<details class="detalles"><summary>📖 Detalles de la ruta: opciones de insumos, ética y la lección principal</summary><h2>¿Para quién es esta ruta?</h2>
+<p>Para quien prepara un <strong>estado del arte</strong>, una propuesta de investigación o un curso, y quiere ordenar una pila de PDFs <strong>sin perder el rigor</strong>: cada dato con su página, cada referencia verificada.</p>
+<h2>Qué te llevas al final (≈35 min)</h2>
+<ol>
+<li><strong>Matriz de revisión en Excel</strong>: pregunta, datos, método, tipo de evidencia, hallazgo, <strong>cita textual con página</strong>, limitaciones y alertas.</li>
+<li><strong>Alertas de lectura crítica</strong>: contradicciones entre el resumen y las tablas, datos que no cuadran.</li>
+<li><strong>Verificación de referencias contra Crossref</strong>: qué citas existen, cuáles tienen errores y cuáles <strong>no existen</strong>.</li>
+<li>Según tu elección: un archivo <strong><code>.bib</code></strong> para tu gestor de referencias y/o un <strong>estado del arte en Word</strong> con citas a página.</li>
+</ol>
+<p>👉 Mira <code>ejemplo-final/</code> para ver la meta. <strong>No lo abras antes de intentarlo</strong>: el corpus tiene sorpresas y la gracia es que Claude Code y tú las encuentren.</p>
+<h2>Tus artículos o los del kit</h2>
+<table>
+<thead>
+<tr>
+<th>Opción</th>
+<th>Qué usas</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Corpus del kit</strong></td>
+<td>8 artículos en <code>articulos/</code> sobre transparencia y corrupción en gobiernos locales</td>
+<td><strong>Todos son ficticios</strong>: autores, revistas, datos y DOIs inventados. Algunos citan trabajos reales</td>
+</tr>
+<tr>
+<td><strong>Tus PDFs</strong></td>
+<td>5–10 artículos de tu tema en <code>04-literatura/mi-trabajo/</code></td>
+<td>Úsalos solo localmente; <strong>no subas a repositorios públicos</strong> PDFs con derechos de autor. Los PDFs escaneados (imagen) no se pueden leer bien</td>
+</tr>
+</tbody>
+</table>
+<h2>Dónde trabajar</h2>
+<p>Abre en Claude Code la carpeta del repositorio y trabaja en <code>04-literatura/mi-trabajo/</code>.</p>
+<h2>Pasos</h2>
+<p>Abre <code>prompts.md</code>. Los niveles 0 a 3 son el núcleo; del 4 y el 5 elige según tu tiempo.</p>
+<h2>La lección de esta ruta</h2>
+<p>Claude Code lee rápido y resume bien. Por eso el riesgo no es que lea mal, sino que <strong>creas sin verificar</strong>. Esta ruta te enseña tres hábitos:
+1. <strong>Toda afirmación con cita textual y página</strong>, para poder comprobarla en segundos.
+2. <strong>Comparar el resumen con las tablas</strong>: los autores (y la IA) a veces exageran.
+3. <strong>Verificar cada referencia</strong> contra una base de datos real. Las citas inventadas existen, también en artículos publicados.</p></details>
+<p>Copia y pega cada prompt en Claude Code (pestaña <strong>Code</strong>, con la carpeta del repositorio abierta).
+Si usas tus propios PDFs, cambia <code>04-literatura/articulos/</code> por <code>04-literatura/mi-trabajo/</code> y ajusta la pregunta.</p><section class="nivel" id="nivel-0">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="04-literatura-n0"> <span>Nivel 0</span></label>
+<h2>Inventario</h2><span class="min">3 min</span></div>
+<pre><code>Crea la carpeta 04-literatura/mi-trabajo/ y trabaja ahí.
+Haz un inventario de los PDFs de 04-literatura/articulos/: autor(es), año, título,
+revista y DOI, en una tabla. Todavía no analices el contenido.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> Claude Code lee varios PDFs de una vez y extrae sus metadatos.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla con los 8 artículos: autores, año, título, revista y DOI.</p></div></section><section class="nivel" id="nivel-1">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="04-literatura-n1"> <span>Nivel 1</span></label>
+<h2>Diseñar la matriz</h2><span class="min">4 min</span></div>
+<pre><code>Mi pregunta de revisión es: ¿qué sabemos sobre los efectos de la transparencia
+en la corrupción y el desempeño de los gobiernos locales?
+
+Propón las columnas de una matriz de revisión de literatura para esta pregunta.
+Deben incluir, al menos: pregunta del estudio, datos, método, tipo de evidencia
+(experimental, cuasi-experimental, observacional, cualitativo, síntesis),
+hallazgo principal, cita textual que lo respalde, página y limitaciones.
+Espera mi visto bueno antes de llenarla.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> <strong>tú</strong> decides qué te importa de cada artículo; la IA solo lo aplica.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una propuesta de columnas para la matriz. Ajústala antes de seguir.</p></div></section><section class="nivel" id="nivel-2">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="04-literatura-n2"> <span>Nivel 2</span></label>
+<h2>Llenar la matriz</h2><span class="min">10 min</span></div>
+<pre><code>Llena la matriz en un Excel (mi-trabajo/matriz_literatura.xlsx) con estas reglas:
+1. La &quot;cita textual&quot; debe ser copia LITERAL de una frase del artículo, con su página.
+2. Si un dato no aparece en el artículo, escribe &quot;No reportado&quot;. No lo deduzcas.
+3. En &quot;limitaciones&quot;, distingue las que declaran los autores de las que observes tú.
+Al terminar, comprueba que cada cita textual aparezca palabra por palabra en su PDF
+y dime cuáles no pasaron la prueba.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> con reglas claras la IA es mucho más confiable, y <strong>le pides que se autoverifique</strong>.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un Excel con la matriz y la lista de citas que no pasaron la verificación literal (idealmente ninguna).</p></div></section><section class="nivel" id="nivel-3">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="04-literatura-n3"> <span>Nivel 3</span></label>
+<h2>Lectura crítica</h2><span class="min">6 min</span></div>
+<pre><code>Para cada artículo, compara lo que dice el RESUMEN con lo que muestran las secciones
+de datos, de resultados y las tablas. Haz una tabla con toda contradicción o dato que no
+cuadre (cifras, número de casos o países, significancia estadística, periodos).
+Agrega una columna &quot;alertas&quot; a la matriz con lo que encuentres.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> los resúmenes a veces exageran. Una buena revisión cita <strong>la tabla, no el resumen</strong>.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Una tabla de contradicciones o datos que no cuadran entre resumen y resultados.</p></div></section><section class="nivel" id="nivel-4">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="04-literatura-n4"> <span>Nivel 4</span></label>
+<h2>Verificar las referencias</h2><span class="min">7 min</span></div>
+<pre><code>Extrae todas las referencias que citan los artículos (sección &quot;Referencias&quot;).
+Escribe un script en Python que consulte cada DOI en la API pública de Crossref
+(https://api.crossref.org/works/DOI) y compare autor, año y título con la cita.
+Clasifica cada referencia como: existe y coincide / existe pero con errores /
+no existe. Ejecútalo y guarda el resultado en mi-trabajo/verificacion_referencias.csv.
+</code></pre>
+<p>💡 <em>Qué aprendes:</em> una referencia puede <strong>verse perfecta y no existir</strong>. Esto aplica a artículos publicados, a tesis de estudiantes… y a lo que escribe una IA.</p><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un CSV con un veredicto por referencia: existe y coincide / existe con errores / no existe.</p></div></section><section class="nivel" id="nivel-5">
+<div class="nivel-cab"><label class="hecho"><input type="checkbox" data-clave="04-literatura-n5"> <span>Nivel 5</span></label>
+<h2>Elige tu salida</h2><span class="min">5 min</span></div>
+<p><strong>Para tu gestor de referencias (Zotero, Mendeley, LaTeX):</strong></p>
+<pre><code>Genera mi-trabajo/referencias.bib con los artículos de la matriz. Cuidado con los
+apellidos compuestos en español: deben ir como &quot;Apellido1 Apellido2, Nombre&quot;.
+</code></pre>
+<p><strong>Para escribir:</strong></p>
+<pre><code>Redacta un estado del arte de una página en Word (mi-trabajo/estado_del_arte.docx),
+organizado por temas, no por artículo. Usa SOLO información de la matriz, cita como
+(Autor, año, p. X) y agrega al final una sección &quot;Notas de verificación&quot; con las alertas.
+</code></pre><div class="caja check"><p class="caja-t">✅ Deberías ver</p><p>Un archivo <code>.bib</code> y/o un estado del arte en Word con citas (Autor, año, p. X).</p></div></section><section class="extra"><h2>Retos para quien termine antes</h2>
+<pre><code>Audita el estado del arte: para cada oración con una cita, muéstrame la cita textual
+de la matriz que la respalda. Marca las oraciones que no tengan respaldo.
+</code></pre>
+<pre><code>Repite el nivel 4 con una lista de referencias de un artículo o tesis mío: [ruta del archivo].
+</code></pre>
+<pre><code>Escribe un CLAUDE.md en mi-trabajo/ con mis reglas de revisión de literatura (columnas,
+formato de citas, cómo tratar los datos no reportados) para reutilizarlas en mi próximo proyecto.
+</code></pre></section><section class="extra"><h2>Reglas de oro</h2>
+<ol>
+<li><strong>Sin página no hay cita.</strong> Si no puedes ubicarla en el PDF, no la uses.</li>
+<li><strong>"No reportado" es una respuesta válida.</strong> Es mejor que un dato deducido.</li>
+<li><strong>Verifica las referencias antes de que lleguen a tu bibliografía.</strong></li>
+</ol></section>
+</main></div>
+<footer>Taller práctico de Claude Code para investigación en ciencias sociales · Materiales en <a href="https://github.com/benjov/taller-claude-code-cide">GitHub</a></footer>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="sitio.js"></script></body></html>
