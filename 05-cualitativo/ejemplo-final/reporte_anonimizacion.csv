@@ -1,0 +1,5 @@
+entrevista,turno,tipo,dato_original,reemplazo
+E03,2,Nombre completo de la participante,(retirado de este reporte),[PARTICIPANTE]
+E03,2,Ubicación exacta del puesto,(retirado de este reporte),en [CALLE DEL CENTRO HISTÓRICO]
+E03,4,Nombre de un tercero,(retirado de este reporte),[LÍDER DE LA ZONA]
+E03,4,Teléfono de un tercero,(retirado de este reporte),su número es [TELÉFONO]
