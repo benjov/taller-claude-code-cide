@@ -10,3 +10,7 @@ venv/
 
 # Configuración local de Claude Code
 .claude/settings.local.json
+
+# Trabajo de cada participante
+*/mi-sitio/
+*/mi-trabajo/

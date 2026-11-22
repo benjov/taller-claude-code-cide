@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dra. Valeria Ejemplo Ruiz · Gobiernos locales y transparencia (sitio ficticio)</title>
+<meta name="description" content="Sitio académico de ejemplo construido con Claude Code. Persona ficticia.">
+<style>
+  :root {
+    --fondo: #FAFAF7; --superficie: #FFFFFF; --texto: #1D232B; --tenue: #5B6573;
+    --acento: #1F5F8B; --acento-suave: #E6EFF6; --borde: #E3E6EA; --aviso: #B03A2E;
+    --radio: 10px; --ancho: 980px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fondo: #12161B; --superficie: #1A2027; --texto: #E7EAEE; --tenue: #9AA5B1;
+            --acento: #7FB6E0; --acento-suave: #1F2B36; --borde: #2A323C; --aviso: #E7766B; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: var(--fondo); color: var(--texto); }
+  a { color: var(--acento); }
+  .aviso { background: var(--aviso); color: #fff; text-align: center; font-size: 13px; padding: 6px 12px; font-weight: 600; }
+  nav { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--fondo) 92%, transparent);
+        backdrop-filter: blur(6px); border-bottom: 1px solid var(--borde); }
+  nav ul { max-width: var(--ancho); margin: 0 auto; padding: 0 20px; display: flex; gap: 22px; list-style: none; overflow-x: auto; }
+  nav a { display: block; padding: 12px 0; text-decoration: none; color: var(--tenue); font-size: 14px; white-space: nowrap; }
+  nav a:hover, nav a:focus-visible { color: var(--acento); }
+  main { max-width: var(--ancho); margin: 0 auto; padding: 0 20px 60px; }
+  header.perfil { display: grid; grid-template-columns: 132px 1fr; gap: 28px; align-items: center; padding: 48px 0 28px; }
+  .avatar { width: 132px; height: 132px; border-radius: 50%; display: grid; place-items: center;
+            background: linear-gradient(135deg, var(--acento), #3E8E7E); color: #fff; font-size: 44px; font-weight: 700; letter-spacing: 1px; }
+  h1 { margin: 0 0 4px; font-size: clamp(28px, 4vw, 38px); line-height: 1.15; }
+  .puesto { margin: 0; color: var(--tenue); }
+  .enlaces { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border: 1px solid var(--borde);
+          border-radius: 999px; font-size: 14px; text-decoration: none; color: var(--texto); background: var(--superficie); }
+  .chip:hover { border-color: var(--acento); color: var(--acento); }
+  section { padding-top: 36px; scroll-margin-top: 50px; }
+  h2 { font-size: 22px; margin: 0 0 16px; padding-bottom: 6px; border-bottom: 2px solid var(--acento-suave); }
+  .lineas { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; padding: 0; list-style: none; }
+  .lineas li { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 14px 16px; }
+  .lineas strong { display: block; margin-bottom: 4px; }
+  .lineas span { color: var(--tenue); font-size: 14px; }
+  .herramientas { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+  .filtro { border: 1px solid var(--borde); background: var(--superficie); color: var(--texto); border-radius: 999px;
+            padding: 5px 14px; font: inherit; font-size: 14px; cursor: pointer; }
+  .filtro[aria-pressed="true"] { background: var(--acento); border-color: var(--acento); color: #fff; }
+  .buscar { margin-left: auto; padding: 6px 12px; border: 1px solid var(--borde); border-radius: 8px;
+            background: var(--superficie); color: var(--texto); font: inherit; font-size: 14px; min-width: 220px; }
+  .pubs { list-style: none; padding: 0; margin: 0; }
+  .pub { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 14px 16px; margin-bottom: 10px; }
+  .pub .anio { font-weight: 700; color: var(--acento); margin-right: 8px; }
+  .pub .tipo { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--tenue); }
+  .pub .titulo { font-weight: 600; display: block; margin: 2px 0; }
+  .pub .ref { color: var(--tenue); font-size: 14px; }
+  .acciones { margin-top: 8px; display: flex; gap: 8px; }
+  .acciones button { font: inherit; font-size: 13px; padding: 3px 10px; border-radius: 6px; cursor: pointer;
+                     border: 1px solid var(--borde); background: transparent; color: var(--texto); }
+  .acciones button:hover { border-color: var(--acento); color: var(--acento); }
+  .vacio { color: var(--tenue); font-style: italic; }
+  .tabla { width: 100%; border-collapse: collapse; }
+  .tabla td { padding: 8px 6px; border-bottom: 1px solid var(--borde); vertical-align: top; }
+  .tabla td:first-child { white-space: nowrap; color: var(--acento); font-weight: 600; width: 110px; }
+  .dos { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  footer { border-top: 1px solid var(--borde); color: var(--tenue); font-size: 13px; text-align: center; padding: 22px; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); background: var(--texto); color: var(--fondo);
+           padding: 8px 16px; border-radius: 8px; font-size: 14px; opacity: 0; transition: opacity .2s; pointer-events: none; }
+  .toast.ver { opacity: 1; }
+  @media (max-width: 640px) {
+    header.perfil { grid-template-columns: 1fr; text-align: center; justify-items: center; }
+    .enlaces { justify-content: center; }
+    .dos { grid-template-columns: 1fr; }
+    .buscar { margin-left: 0; width: 100%; }
+  }
+  @media print {
+    nav, .herramientas, .acciones, .aviso { display: none; }
+    body { background: #fff; color: #000; }
+    .pub, .lineas li { border: none; padding: 4px 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="aviso" role="note">Sitio de ejemplo para el taller de Claude Code · Persona, institución, revistas y DOIs ficticios</div>
+
+<nav aria-label="Secciones">
+  <ul>
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#investigacion">Investigación</a></li>
+    <li><a href="#publicaciones">Publicaciones</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#docencia">Docencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
+
+<main>
+  <header class="perfil" id="inicio">
+    <div class="avatar" aria-hidden="true">VE</div>
+    <div>
+      <h1>Valeria Ejemplo Ruiz</h1>
+      <p class="puesto">Profesora-investigadora titular · División de Políticas Públicas<br>Instituto Ficticio de Estudios Sociales (IFES)</p>
+      <div class="enlaces">
+        <a class="chip" href="mailto:valeria.ejemplo@example.org">✉️ Correo</a>
+        <a class="chip" href="#" aria-disabled="true" title="ORCID ficticio">🆔 ORCID</a>
+        <a class="chip" href="#" aria-disabled="true" title="Perfil ficticio">🎓 Google Scholar</a>
+        <a class="chip" href="../insumos/cv_ficticio.pdf">📄 CV en PDF</a>
+      </div>
+    </div>
+  </header>
+
+  <p>Soy politóloga y estudio <strong>cómo funcionan los gobiernos locales</strong> en América Latina: qué tan transparentes son, cómo participa la ciudadanía y qué capacidades administrativas explican su desempeño. Combino datos administrativos y experimentos de campo con trabajo cualitativo en municipios. Coordino el <strong>Laboratorio de Gobierno Local</strong> del IFES y he asesorado a organismos garantes de transparencia.</p>
+
+  <section id="investigacion">
+    <h2>Líneas de investigación</h2>
+    <ul class="lineas">
+      <li><strong>Transparencia municipal</strong><span>Quién usa los portales de transparencia y qué cambia cuando se usan.</span></li>
+      <li><strong>Participación ciudadana</strong><span>Presupuestos participativos y confianza en el gobierno local.</span></li>
+      <li><strong>Capacidades administrativas</strong><span>Por qué algunos municipios cumplen y otros no.</span></li>
+      <li><strong>Métodos experimentales</strong><span>Experimentos de campo para evaluar políticas públicas.</span></li>
+    </ul>
+  </section>
+
+  <section id="publicaciones">
+    <h2>Publicaciones</h2>
+    <div class="herramientas">
+      <button class="filtro" data-tipo="todas" aria-pressed="true">Todas</button>
+      <button class="filtro" data-tipo="articulo" aria-pressed="false">Artículos</button>
+      <button class="filtro" data-tipo="libro" aria-pressed="false">Libros</button>
+      <button class="filtro" data-tipo="capitulo" aria-pressed="false">Capítulos</button>
+      <input class="buscar" type="search" placeholder="Buscar por título, revista o coautor…" aria-label="Buscar publicaciones">
+    </div>
+    <ul class="pubs" id="lista-pubs"></ul>
+    <p class="vacio" id="sin-resultados" hidden>No hay publicaciones que coincidan con la búsqueda.</p>
+  </section>
+
+  <section id="proyectos">
+    <h2>Proyectos de investigación</h2>
+    <table class="tabla">
+      <tr><td>2024–2026</td><td><strong>Transparencia proactiva en municipios: un experimento a gran escala</strong><br><span class="ref">Responsable · Fondo Ficticio de Investigación Científica</span></td></tr>
+      <tr><td>2020–2022</td><td><strong>Atlas de capacidades municipales</strong><br><span class="ref">Corresponsable · Fundación Ejemplo para la Sociedad</span></td></tr>
+    </table>
+  </section>
+
+  <section id="docencia">
+    <div class="dos">
+      <div>
+        <h2>Docencia</h2>
+        <table class="tabla">
+          <tr><td>Doctorado</td><td>Métodos experimentales en ciencias sociales</td></tr>
+          <tr><td>Maestría</td><td>Gobiernos locales y políticas públicas</td></tr>
+          <tr><td>Licenciatura</td><td>Introducción a la ciencia política</td></tr>
+        </table>
+        <p class="ref">He dirigido 4 tesis de doctorado y 11 de maestría.</p>
+      </div>
+      <div>
+        <h2>Formación y distinciones</h2>
+        <table class="tabla">
+          <tr><td>2014</td><td>Doctorado en Ciencia Política, Universidad Imaginaria del Norte</td></tr>
+          <tr><td>2009</td><td>Maestría en Administración y Políticas Públicas, IFES</td></tr>
+          <tr><td>2023</td><td>Premio Ficticio a la mejor investigación en gobierno local</td></tr>
+          <tr><td>2018</td><td>Sistema Imaginario de Investigadores, Nivel II</td></tr>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>📍 Edificio B, cubículo 214 · Ciudad Ejemplo<br>
+       ✉️ <a href="mailto:valeria.ejemplo@example.org">valeria.ejemplo@example.org</a><br>
+       Idiomas: español, inglés y portugués.</p>
+  </section>
+</main>
+
+<footer>Última actualización: noviembre de 2026 · Sitio construido con Claude Code a partir de un CV en PDF</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  // Datos de publicaciones: editar aquí para actualizar el sitio.
+  const PUBLICACIONES = [
+    { tipo: "articulo", anio: 2025, autores: "Ejemplo Ruiz, V. y Prueba Torres, J.",
+      titulo: "¿Quién lee los portales de transparencia? Evidencia de 1,200 municipios",
+      fuente: "Revista Ficticia de Políticas Públicas", vol: "18(2): 45–78", doi: "10.00000/rfpp.2025.018" },
+    { tipo: "articulo", anio: 2024, autores: "Ejemplo Ruiz, V.",
+      titulo: "Presupuestos participativos y confianza en el gobierno local: un experimento de campo",
+      fuente: "Journal of Imaginary Governance", vol: "9(1): 1–29", doi: "10.00000/jig.2024.009" },
+    { tipo: "articulo", anio: 2023, autores: "Muestra Díaz, A. y Ejemplo Ruiz, V.",
+      titulo: "Capacidades administrativas y cumplimiento de obligaciones de transparencia",
+      fuente: "Gestión y Políticas Ejemplares", vol: "32(4): 201–236", doi: "10.00000/gpe.2023.032" },
+    { tipo: "libro", anio: 2022, autores: "Ejemplo Ruiz, V.",
+      titulo: "Gobernar de cerca: transparencia y participación en los municipios mexicanos",
+      fuente: "Editorial Ejemplo", vol: "Ciudad Ejemplo", doi: "" },
+    { tipo: "articulo", anio: 2021, autores: "Ejemplo Ruiz, V.",
+      titulo: "La rendición de cuentas horizontal en municipios pequeños",
+      fuente: "Revista Imaginaria de Ciencia Política", vol: "41(3): 512–540", doi: "10.00000/rcp.2021.041" },
+    { tipo: "capitulo", anio: 2020, autores: "Ejemplo Ruiz, V.",
+      titulo: "Los organismos garantes de transparencia en perspectiva comparada",
+      fuente: "en Muestra Díaz, A. (coord.), Instituciones que vigilan. Editorial Imaginaria", vol: "pp. 115–142", doi: "" },
+    { tipo: "articulo", anio: 2019, autores: "Ejemplo Ruiz, V., Prueba Torres, J. y Ficción López, M.",
+      titulo: "Solicitudes de acceso a la información como medida de demanda ciudadana",
+      fuente: "Latin American Fictional Review", vol: "54(2): 88–110", doi: "10.00000/lafr.2019.054" },
+  ];
+  const ETIQUETA = { articulo: "Artículo", libro: "Libro", capitulo: "Capítulo" };
+
+  const cita = p => `${p.autores} (${p.anio}). ${p.titulo}. ${p.fuente}, ${p.vol}.${p.doi ? " https://doi.org/" + p.doi : ""}`;
+  const bibtex = p => {
+    const clave = p.autores.split(",")[0].replace(/\s+/g, "") + p.anio;
+    const tipo = { articulo: "article", libro: "book", capitulo: "incollection" }[p.tipo];
+    const campo = { articulo: "journal", libro: "publisher", capitulo: "booktitle" }[p.tipo];
+    return `@${tipo}{${clave},\n  author = {${p.autores.replace(/ y /g, " and ")}},\n  title = {${p.titulo}},\n  ${campo} = {${p.fuente}},\n  year = {${p.anio}}${p.doi ? `,\n  doi = {${p.doi}}` : ""}\n}`;
+  };
+
+  const lista = document.getElementById("lista-pubs");
+  const buscar = document.querySelector(".buscar");
+  const toast = document.getElementById("toast");
+  let tipoActivo = "todas";
+
+  function pintar() {
+    const q = buscar.value.trim().toLowerCase();
+    const visibles = PUBLICACIONES.filter(p =>
+      (tipoActivo === "todas" || p.tipo === tipoActivo) &&
+      (!q || [p.titulo, p.fuente, p.autores].join(" ").toLowerCase().includes(q)));
+    lista.innerHTML = "";
+    visibles.forEach(p => {
+      const li = document.createElement("li");
+      li.className = "pub";
+      li.innerHTML = `<span class="anio">${p.anio}</span><span class="tipo">${ETIQUETA[p.tipo]}</span>
+        <span class="titulo"></span><span class="ref"></span>
+        <div class="acciones"><button data-a="cita">Copiar cita</button><button data-a="bib">Copiar BibTeX</button></div>`;
+      li.querySelector(".titulo").textContent = p.titulo;
+      li.querySelector(".ref").textContent = `${p.autores} · ${p.fuente}, ${p.vol}${p.doi ? " · DOI " + p.doi + " (ficticio)" : ""}`;
+      li.querySelector('[data-a="cita"]').onclick = () => copiar(cita(p), "Cita copiada");
+      li.querySelector('[data-a="bib"]').onclick = () => copiar(bibtex(p), "BibTeX copiado");
+      lista.appendChild(li);
+    });
+    document.getElementById("sin-resultados").hidden = visibles.length > 0;
+  }
+
+  function copiar(texto, mensaje) {
+    navigator.clipboard?.writeText(texto).then(() => avisar(mensaje), () => avisar("No se pudo copiar"));
+  }
+  function avisar(m) { toast.textContent = m; toast.classList.add("ver"); setTimeout(() => toast.classList.remove("ver"), 1600); }
+
+  document.querySelectorAll(".filtro").forEach(b => b.addEventListener("click", () => {
+    tipoActivo = b.dataset.tipo;
+    document.querySelectorAll(".filtro").forEach(x => x.setAttribute("aria-pressed", x === b));
+    pintar();
+  }));
+  buscar.addEventListener("input", pintar);
+  document.querySelectorAll('a[aria-disabled="true"]').forEach(a => a.addEventListener("click", e => { e.preventDefault(); avisar("Enlace ficticio"); }));
+  pintar();
+</script>
+</body>
+</html>

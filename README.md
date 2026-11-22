@@ -18,7 +18,7 @@ Elige la ruta que más se parezca a tu trabajo. Cada una trae `README.md` (qué 
 
 | Ruta | Producto | Insumos | Estado |
 |---|---|---|---|
-| 01 · Web académica | Tu página web personal | CV propio o ficticio | 🚧 en preparación |
+| **01 · Web académica** | Tu página web personal con publicaciones filtrables y citas/BibTeX | CV propio o ficticio (PDF/Word) | ✅ lista |
 | 02 · Syllabus | Sitio del curso con calendario y lecturas | Syllabus propio o ficticio | 🚧 en preparación |
 | 03 · Datos | Análisis reproducible con gráficas | Datos públicos | 🚧 en preparación |
 | 04 · Literatura | Matriz de revisión de literatura + .bib | Artículos | 🚧 en preparación |
