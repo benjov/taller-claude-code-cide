@@ -21,7 +21,7 @@ Elige la ruta que más se parezca a tu trabajo. Cada una trae `README.md` (qué 
 | **01 · Web académica** | Tu página web personal con publicaciones filtrables y citas/BibTeX | CV propio o ficticio (PDF/Word) | ✅ lista |
 | 02 · Syllabus | Sitio del curso con calendario y lecturas | Syllabus propio o ficticio | 🚧 en preparación |
 | 03 · Datos | Análisis reproducible con gráficas | Datos públicos | 🚧 en preparación |
-| 04 · Literatura | Matriz de revisión de literatura + .bib | Artículos | 🚧 en preparación |
+| **04 · Literatura** | Matriz de revisión con citas a página, alertas de lectura crítica y **referencias verificadas en Crossref** | 8 artículos ficticios o tus PDFs | ✅ lista |
 | 05 · Cualitativo | Libro de códigos y matriz de codificación | Entrevistas ficticias | 🚧 en preparación |
 | **06 · Fuentes auditables** | Notebook que descarga, replica y **valida** la informalidad laboral contra INEGI | Datos reales: ENOE (INEGI), ILOSTAT | ✅ lista |
 
