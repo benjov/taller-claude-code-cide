@@ -19,7 +19,7 @@ Elige la ruta que más se parezca a tu trabajo. Cada una trae `README.md` (qué 
 | Ruta | Producto | Insumos | Estado |
 |---|---|---|---|
 | **01 · Web académica** | Tu página web personal con publicaciones filtrables y citas/BibTeX | CV propio o ficticio (PDF/Word) | ✅ lista |
-| 02 · Syllabus | Sitio del curso con calendario y lecturas | Syllabus propio o ficticio | 🚧 en preparación |
+| **02 · Syllabus** | Sitio del curso con fechas reales, lecturas y entregas, más calendario `.ics` para estudiantes | Syllabus y calendario propios o ficticios | ✅ lista |
 | **03 · Datos** | Análisis reproducible: cobertura, 3 gráficas, modelo de panel y reporte HTML (Python, R o Stata) | Datos reales del Banco Mundial o tus datos | ✅ lista |
 | **04 · Literatura** | Matriz de revisión con citas a página, alertas de lectura crítica y **referencias verificadas en Crossref** | 8 artículos ficticios o tus PDFs | ✅ lista |
 | 05 · Cualitativo | Libro de códigos y matriz de codificación | Entrevistas ficticias | 🚧 en preparación |

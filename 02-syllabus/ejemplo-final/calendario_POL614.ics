@@ -1,0 +1,151 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Taller Claude Code CIDE//Syllabus//ES
+CALSCALE:GREGORIAN
+X-WR-CALNAME:POL-614 Evaluación de impacto de políticas públicas
+X-WR-TIMEZONE:America/Mexico_City
+BEGIN:VEVENT
+UID:pol614-s1@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270118T220000Z
+DTEND:20270119T010000Z
+SUMMARY:POL-614 · Sesión 1: Introducción: ¿por qué evaluar?
+DESCRIPTION:Lectura: Gertler et al. (2017)\, cap. 1
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s2@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270125T220000Z
+DTEND:20270126T010000Z
+SUMMARY:POL-614 · Sesión 2: Teoría de cambio y cadena de resultados
+DESCRIPTION:Lectura: Gertler et al. (2017)\, cap. 2
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s3@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270208T220000Z
+DTEND:20270209T010000Z
+SUMMARY:POL-614 · Sesión 3: El problema fundamental de la inferencia causal
+DESCRIPTION:Lectura: Angrist y Pischke (2014)\, introducción\nLectura: Cunningham (2021)\, cap. 4\nEntrega: Tarea 1
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s4@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270215T220000Z
+DTEND:20270216T010000Z
+SUMMARY:POL-614 · Sesión 4: Experimentos aleatorios I: diseño
+DESCRIPTION:Lectura: Duflo\, Glennerster y Kremer (2007)\nLectura: Gertler et al. (2017)\, cap. 4
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s5@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270222T220000Z
+DTEND:20270223T010000Z
+SUMMARY:POL-614 · Sesión 5: Experimentos aleatorios II: el caso Progresa
+DESCRIPTION:Lectura: Skoufias (2005)\nLectura: Levy (2006)\, selección
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s6@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270301T220000Z
+DTEND:20270302T010000Z
+SUMMARY:POL-614 · Sesión 6: Experimentos en gobernanza y corrupción
+DESCRIPTION:Lectura: Olken (2007)\nEntrega: Tarea 2
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s7@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270308T220000Z
+DTEND:20270309T010000Z
+SUMMARY:POL-614 · Sesión 7: Regresión y el sesgo de variable omitida
+DESCRIPTION:Lectura: Angrist y Pischke (2014)\, cap. 2
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s8@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270329T220000Z
+DTEND:20270330T010000Z
+SUMMARY:POL-614 · Sesión 8: Taller de propuestas
+DESCRIPTION:\nEntrega: Propuesta de evaluación
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s9@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270405T220000Z
+DTEND:20270406T010000Z
+SUMMARY:POL-614 · Sesión 9: Diferencias en diferencias
+DESCRIPTION:Lectura: Card y Krueger (1994)\nLectura: Angrist y Pischke (2014)\, cap. 5
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s10@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270412T220000Z
+DTEND:20270413T010000Z
+SUMMARY:POL-614 · Sesión 10: Regresión discontinua
+DESCRIPTION:Lectura: Imbens y Lemieux (2008)\nLectura: Angrist y Pischke (2014)\, cap. 4
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s11@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270426T220000Z
+DTEND:20270427T010000Z
+SUMMARY:POL-614 · Sesión 11: Experimentos naturales: auditorías y elecciones
+DESCRIPTION:Lectura: Ferraz y Finan (2008)\nEntrega: Tarea 3
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s12@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270503T220000Z
+DTEND:20270504T010000Z
+SUMMARY:POL-614 · Sesión 12: Variables instrumentales
+DESCRIPTION:Lectura: Angrist y Pischke (2014)\, cap. 3
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s13@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270510T220000Z
+DTEND:20270511T010000Z
+SUMMARY:POL-614 · Sesión 13: Control sintético
+DESCRIPTION:Lectura: Abadie\, Diamond y Hainmueller (2010)
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s14@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270517T220000Z
+DTEND:20270518T010000Z
+SUMMARY:POL-614 · Sesión 14: Ética\, costos y uso de la evidencia
+DESCRIPTION:Lectura: Banerjee y Duflo (2011)\, cap. 1
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-s15@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART:20270524T220000Z
+DTEND:20270525T010000Z
+SUMMARY:POL-614 · Sesión 15-16: Presentaciones de proyectos (sesiones 15 y 16 fusionadas)
+DESCRIPTION:\nEntrega: Presentación
+LOCATION:Aula B-12
+END:VEVENT
+BEGIN:VEVENT
+UID:pol614-final@taller-claude-code-cide
+DTSTAMP:20261122T000000Z
+DTSTART;VALUE=DATE:20270531
+DTEND;VALUE=DATE:20270601
+SUMMARY:POL-614 · Entrega del documento final
+DESCRIPTION:Documento final del proyecto de evaluación
+LOCATION:Aula B-12
+END:VEVENT
+END:VCALENDAR
