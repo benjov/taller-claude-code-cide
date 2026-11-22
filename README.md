@@ -1,5 +1,7 @@
 # Taller: Claude Code para investigación en ciencias sociales · CIDE
 
+> 🧭 **Guía paso a paso de la sesión:** https://benjov.github.io/taller-claude-code-cide/
+
 Kit práctico para aprender a usar **Claude Code** (app de escritorio de Claude o claude.ai) en tareas reales de investigación y docencia. En 60 minutos cada participante termina **un producto útil para su trabajo**.
 
 ## Antes del taller (5 minutos)
